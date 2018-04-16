@@ -63,27 +63,8 @@ describe("Étape 2: les notes aléatoires", () => {
 
 describe("Étape 3: les points au-dessus de 10", () => {
 
-    const bulletin = {
-        partie: "Partie 1",
-        notes: [],
-        points: 0,
-        eliminer: false,
-        moyenne: false,
-        reset: function() {
-            this.partie = "Partie 1",
-            this.notes = [],
-            this.points = 0,
-            this.eliminer = false,
-            this.moyenne = false;
-        }
-    }
+    const bulletin = null
 
-    for (let k = 0; k < bulletin["notes"].length; k++) {
-        if (bulletin["notes"][k] > 10) {
-            bulletin["points"] += bulletin["notes"][k] - 10
-        }
-    }
-    
     it("Le nombre de points est un number", () => {
         assert.typeOf(bulletin["points"], "number", `La propriété \"points\" n'est pas un nombre, mais un ${typeof(bulletin["points"])}`)
     })

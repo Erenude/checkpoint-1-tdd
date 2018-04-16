@@ -3,7 +3,9 @@ const { assert } = require('chai')
 // Etape 1 : Création de l'objet
 describe("Étape 1: l'objet BULLETIN", () => {
 
-    const bulletin = null
+    const bulletin = {
+        partie: "une partie"
+    }
 
     it("BULLETIN est un objet", () => {
       assert.isObject(bulletin, "BULLETIN n'est pas un objet");
@@ -13,7 +15,7 @@ describe("Étape 1: l'objet BULLETIN", () => {
       assert.containsAllKeys(bulletin, ["partie", "notes", "points", "eliminer", "moyenne"], "Il manque une ou plusieurs propriétés")
     });
 
-    it("La propriété \"partie\" existe", () => {
+    it("La propriété \"partie\" est de type string", () => {
       assert.typeOf(bulletin.partie, "string", "La propriété \"partie\" n'est pas une chaîne de caractères");
     });
 
